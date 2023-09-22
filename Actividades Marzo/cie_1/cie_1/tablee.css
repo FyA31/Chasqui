@@ -1,0 +1,320 @@
+/* Este código, para todo el cuerpo, permite con position:fixed este estático y evitar scroll y con cero espacios*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
+body {
+    font-family: 'Roboto mono', monospace;
+    margin: 0;
+    padding: 0;
+
+}
+ /* A todos los selectores ancla */
+a {
+    text-decoration: none; /*Quita las lineas de palabras link*/
+    display:inline; /* todo el contenido se mueva horizontalmente */
+    color: black
+}
+
+.home-body {
+    position: fixed; /*Posición fija de todo el cuerpo. Ojo esta clase es sólo para la primera página y evitar el scroll*/
+    top: 0; /* Arriba */
+    bottom: 0; /* Abajo */
+    left: 0; /* Derecha */
+    right: 0; /* Izquierda */  
+}
+.grid-container {
+    max-width: 980px; /* se crea un espacio de los contenedores div de la pagina blogs */
+    margin: auto;
+}
+
+header {
+    width: 100%; /* Ocupa el ancho un 100% de derecha a izquierda */
+    height: 80px; /* Altura total de header*/
+    display: grid; /* Nos permite el comenzar hacer una rejilla fraccionada*/
+    grid-template-rows: 1fr 1fr; /* Permite crear filas (rows=fila) en este caso dos filas, recuerda para esto siempre se empieza con display:grid-template-areas: ; */
+    grid-template-columns: 1f;
+   
+}
+
+/* Esta class pertenece al section, o fila 1 superior, el cual contiene navegadores al cual se va una ancho, altura y un color y un display:grid para que el contenido que tenga se pueda mover facilmente*/
+header .header-icons-container {
+    width: 100%;
+    height: 50px; /*Recordar que el header total tiene una medida total de 140px*/
+    display: grid;
+    background-color: #47cfac;
+} 
+/*Esta class pertence al contenedor div que contiene todos los anclas o link*/
+header .header-icons-container .icons {
+    width: 300px; /* Todo el ancho con los icones tiene 300px */
+    height: auto; /* Se coloca una altura auto para que abarque todo el alto de la fila */
+    display: flex; /* Sirve para alterar sus dimensiones y llenar el espacio disponible, así como para, hacer los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento. */
+    justify-items: flex-end; /* Alinea los elementos en la parte inferior del contenedor */
+    align-items: center; /* Va alinear a las palabras o icones en el centro vertical de la primera fila */
+    justify-content: space-between; /* Le otorga un espacio intermedio, con la misma medida, entre las palabras o iconos */
+    justify-self: end; /* con esto se manda a todo las palabras o icones hacia la derecha y sin márgenes*/
+    margin-right: 50px; /* este va proporcionar un espacio o margen en la derecha */
+
+}
+/* Una vez cambiado las palabras por iconos, estos se cambian de color negro por blanco */
+header .icons span {
+    color: white;
+}
+/* Se va a dar los valores a la fila dos que esta contenida por la etiqueta nav */
+nav {
+    display: grid; /* Se apertura display:grid para formas dos columnas para mover el logo y el "sobre mi" */
+    grid-template-columns: 1fr 1fr; /* Se forma dos columnas. Recuerda, en una se colocará el logo y en otra sabro mi*/
+    height: 90px; /* El height de la fila 1 mide 50px, y el total de header es de 150px, en ese sentido sobra los 90px */
+}
+
+/* La etiqueta section tiene como contenedor al logo, con la clase nav-logo-container */
+nav .nav-logo-container {
+    margin-left: 50px; /* Espacio al logo de izquierda a derecha */
+}
+/* Con esta class se va a poner dimensiones al logo */
+nav .nav-logo-container img {
+    width: 220px; /* ancho del lighting-color: ; */
+    margin-top: 10px; /* borde hacia arriba de 10px */
+}
+/* La otra etiqueta section tiene al sobre mi */
+nav .profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex; /* Sirve para alterar sus dimensiones y llenar el espacio disponible, así como para, hacer los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento. */
+    justify-items: flex-end; /* Alinea los elementos en la parte inferior del contenedor */
+    align-items: center; /* Va alinear a las palabras sobre mi en el centro vertical de la primera fila */
+    justify-content: flex-end; /* Coloca a sobre mi en la parte izquierda de la columna 2 */
+    margin-right: 50px; /* se le da un margin al lado derecho al sobre mi */
+}
+/* Con la etiqueta a se va a cambiar el texto sobre mi, subrayado y fuente */
+nav .profile-link a {
+    color: black;
+    border-bottom: 1px solid black; /* Esto es para subrayar Sobre mi */
+}
+/* A todo main se va divider en regillas para eso se va utilizar display:grid */
+.home-main {
+    display: grid; /* Se apertura display:grid para formas dos columnas para mover texto y boton */
+    grid-template-columns: 1fr 4fr 1fr; /* se realizan tres columnas, pero la 4fr va ser cuatro veces más grande que 1fr */
+    height: 100%;
+    background-image: url('../assets/img/Cover.png'); /* con esta propiedad se va a colocar la imagen de fondo */
+    background-position: center; /* centra a la imagen en el body */
+    background-repeat: no-repeat; /* Esto no permite que la imagen se repita en el body como cuadrícula */
+    background-size: cover; /* Esta propiedad escala la imagen al mínimo tamaño, manteniendo también las proporciones, para que ocupe todo el contenedor. */
+    }
+/* la seccion se va a colocar en dos columnas */
+.home-main section {
+    display: grid;
+    grid-column: 2; /*OJO acá, en la columno 4fr se formó dos columnas que parecen filas uno con el texto y el otro con el boton*/
+    justify-items: center; /* Centro verticalmente el texto y el boton */
+    height: 350px;
+    margin-top: 80px;
+}
+/* se va ha modificar la etiqueta p, el párrafo */
+.home-main-tex {
+    font-family: 'Roboto mono', monospace;
+    font-size: 30px;
+    font-weight: 700px; /* esta propiedad sirve para dar una negrita */
+    letter-spacing: 10px; /* le da un espacio entre las letras */
+    color: white;
+    text-align: center; /* alinea el párrafo en el centro */
+}
+/* Vamos a dar efectos al boton */
+.home-main-button {
+    width: 110px; /* ancho del boton */
+    height: 50px; /* altura del boton */
+    background: #47cfac;
+    display: grid; /* se abre para alinear al boton */
+    align-items: center; /* se alinea verticalmente al boton */
+}
+/* Se va a modificar al texto dentro del boton, etiqueta a */
+.home-main-button a {
+    font-weight: 700; /* negrita fuente */
+    font-size: 18px;
+}
+
+.blogs-main { /* Propiedad y valor para todo el cuerpo */
+    display: grid; /* se abre para ordenar en columnas a todas las secciones */
+}
+
+.blogs-news-container { /* propiedades para la primera etiqueta section de color gris*/
+    background-color:#e6e9ed ;
+    padding: 0 50px 40px; /* Es el espacio interno. Recuerda el margin es el espacio externo para poder alejar los elementos. */
+}
+
+.blogs-main-new { /* Para el div que con tiene un título y una imagen */
+    display: grid; /* se abre para crear columnas y filas */
+    grid-template-columns: 1fr 2fr; /* Dos columnas, 2fr es el doble de 1fr */
+    grid-template-rows: 2fr; /* una fila con doble espacio que da 2fr */
+    align-items: center;
+}
+
+.blogs-news-img-container { /* imagen del primer div */
+grid-column: 1;
+margin-top: 30px; /* con esto se ha colocado a la imagen en la primera columna, al pie del título */
+} 
+
+.blogs-news-img-container img { /* se trabaja sólo con la imagen */
+        width: 90%; /* Se coloca porcentaje para que la imagen según la pantalla cresca o disminuya */
+}
+
+.blogs-news-info-container { /* este es el contenerdor por el segundo div */
+    grid-column: 2; /* ubica a la información en la segunda columna */
+}
+
+.blogs-news-info-container p { /* clase para le parrafo */
+    margin-bottom: 35px;
+
+}
+.blogs-posts-container { /* section 2 donde va la información en filas y columnas */
+    padding: 0 50px 40px;
+}
+
+.blogs-posts-container h3 {
+border-bottom: 1px solid #cdd2da; /* se coloca border al titulo ultimo blosposts para crear una linea al pie de este */
+padding-bottom: 20px; /* espacio desde abajo hacia arriba */
+text-align: center; /* centra el texto */
+}
+
+.blogs-button { /* Esta clase es para todos los botones */
+    border: 1px solid #47cfac;
+    padding: 10px 15px; /* espacio interno del boton con relacion al texto */
+    font-size: 12px;
+}
+.blogs-posts-container .post-container {
+    display: inline-block; /* para que se ponga los contenerdores de forma horizontal */
+    padding-left: 10px; /* espacio entre cada contenido */
+    max-width: 30%; 
+    margin-bottom: 50px; /* espacio de separacion de arriba a abajo */
+}
+
+.blogs-posts-container .post-container p {
+    margin-bottom: 35px; 
+}
+.blogs-posts-container .post-container img {
+    width: 70%;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #22272d;
+    border-top: 35px solid #47cfac;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin-top: 30px;
+}
+
+.blogpost-img-container { /* trabajar la imagen del blog */
+    padding: 0 50px 5px; /* arriba 0, izquier y derecha 50, y abojo 40 */
+}
+.blogpost-img-container img { /* para trabajar directamente con la imagen con un ancho del 100% */
+    width: 50%;
+    
+}
+
+.blogpost-main-container { /* segundo section donde esta el titulo, sub titilo y parrafos */
+    padding: 0 50px 40px; /* arriba 0, izquier y derecha 50, y abojo 40 */
+}
+
+.blogpost-main-container h3 {
+    border-bottom: 1px solid #cdd2da; /* 1px sirve para que aparesca una linea inferior del boton*/
+    padding-bottom: 20px;
+}
+
+.blogpost-main-container h1 { /*  darle más tamaño al titulo */
+    font-size: 35px;
+}
+
+.contact-main-container { /* vamos a ordenar donde van los contactos */
+    width: 100%;
+    min-height: 250px;
+    background-color: #e6e9ed;
+    text-align: center; /* alinia el texto al centro */
+    padding-bottom: 50px;
+}
+.contact-main-container div {
+    display: inline-block; /* como el div tiene por de static, con diplay inline book se coloca a los dos div en fila */
+    width: 49.5%;
+    height: 100%;
+}
+.contact-main-container div a {
+    border-bottom: 1px solid black; /* subrayamos a los anclas de color negro */
+    padding-bottom: 5px;
+}
+
+.contact-main-container .contact-left, .contact-right { /* son las clases para el texto y se vaya a la izquierda de cada icono */
+    text-align: initial; /* hace que los textos y los anclas vayan hacia la izquierda */
+    margin-top: 85px;
+}
+
+.contact-main-container img {
+    width: 100px;
+}
+
+.profile-main-container { /* contenedor que contiene imagen, titulo y parraro del perfil */
+    padding: 70px 40px;
+    background-color: #e6e9ed;
+    margin-bottom: 50px;
+}
+.profile-main-container img { /* va a trabajar la imagen de perfil */
+    width: 320px;
+    margin-right: 30px ; /* le agrega un margen izquierdo a la foto para alejar al parrafo */
+}
+
+.profile-container {
+     display: flex;  /*   la foto con el parraro se aline en una fila */
+}
+
+.profile-main-proyects {
+    padding:  0 50px 30px;
+}
+.profile-main-proyects h3 {
+    border-bottom: 1px solid #cdd2da;
+    padding-bottom: 35px;
+    text-align: center;
+}
+.profile-link a {
+    text-decoration-style: none;
+}
+.proyects-main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.proyects-container {
+    padding: 0 5px;
+}
+
+table{.body__card_back input{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #2e3bfa;
+    box-shadow: 1px 1px 30px -5px #2e3bfa;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+    border-collapse: collapse;
+    border: #333333 2px solid;
+}
+
+th {
+    padding: 5px 10px;
+    border: #333333 2px solid;
+    background-color: #e6e9ed ;
+}
+
+td {
+    padding: 5px 10px;
+    border: #333333 2px solid;
+}
+
+.sombra {
+    background-color: #e6e9ed;
+    text-align: center;
+
+}
+

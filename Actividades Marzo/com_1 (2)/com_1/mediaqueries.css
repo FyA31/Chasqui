@@ -1,0 +1,29 @@
+@media (max-width:900px) { /* a los 900 el contenido va a cambiar */
+    .blogs-main-new { /* Llamamos a esta etiqueta para cambiar las columnas y las filas */
+        grid-template-colums: 1fr; /* que tenga una sola columna */
+        grid-template-rows: 3fr;/* Em vez de dos filas ahora tenga tres filas */
+    }
+    .blogs-news-img-container { /* vamos a mover la imagen */
+        grid-row: 2; /* imagen pasa a la fila dos */
+    }
+    .blogs-news-info-container {/* vamos a mover la informacion */
+        grid-column: 1;/* informacion pase a la columna 1 */
+        grid-row: 3;  /* y que ocupe la fila 3 */
+    }
+   .blogs-posts-container .post-container { /* la información de tres imagenes con informacion pase solo a dos */
+       max-width: 45%;
+   } 
+   .proyects-main-container { /* se pretende cambiar al contenido del perfil */
+        grid-template-columns: 1fr 1fr; /* dos columnas */
+        grid-template-rows: 2fr; /* en dos filas */
+   } 
+   .profile-main-container .profile-container {
+       display: block;
+   }
+}
+
+@media (max-width: 600px) {
+    .blogs-posts-container .post-container {
+        max-width: 95%;
+    }
+}

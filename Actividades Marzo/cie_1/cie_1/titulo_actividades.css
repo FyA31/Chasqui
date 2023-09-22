@@ -1,0 +1,53 @@
+/* botonnes flotantes */
+.container2 {
+  background-size: cover;
+  background-position: center;
+}
+.container2 .btn-float .btn {
+  text-decoration: none;
+  font-family: Segoe Print;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #fff;
+  position: fixed;
+  right: 20px;
+  bottom: 85px;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 5px 10px 0px white;
+  z-index: 99;
+}
+.container2 .btn-float .btn:hover {
+  color: #19ce05;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-7px);
+}
+.container3 {
+  background-size: cover;
+  background-position: center;
+}
+.container3 .btn-float3 .btn3 {
+  text-decoration: none;
+  font-family: Segoe Print;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #fff;
+  position: fixed;
+  right: 20px;
+  bottom: 35px;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 5px 10px 0px white;
+  z-index: 99;
+}
+
+.container3 .btn-float3 .btn3:hover {
+  color: #19ce05;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-7px);
+}
+/* fin de botonnes flotantes */

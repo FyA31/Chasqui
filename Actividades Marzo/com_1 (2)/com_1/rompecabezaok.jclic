@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="rompecabezaok" version="0.1.3">
+ <settings>
+  <title>rombecabeza22</title>
+  <revision description="created" date="2/10/22" />
+  <description>
+   <p>Ordenar imagen correspondiente a la ceramica de Condorcanquir.</p>
+  </description>
+  <descriptors />
+  <cover file="ceramica_condor-resized1.jpg" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Ordenar imagen correspondiente a la ceramica de Condorcanquir.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="Puzle Amazonas Offline" />
+ </sequence>
+ <activities>
+  <activity class="@puzzles.DoublePuzzle" name="Puzle Amazonas Offline" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Ordena la siguiente imagen.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Tarea concluida!</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>¡Intentalo de nuevo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x3366FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x3333FF" border="true">
+     <gradient source="0x0000FF" dest="0xFFFFFF" angle="0" cycles="2" />
+    </window>
+   </settings>
+   <cells rows="3" cols="3" border="true" image="ceramica_condor-resized.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x3333FF" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ceramica_condor-resized.jpg" file="ceramica_condor-resized.jpg" />
+  <media name="ceramica_condor-resized1.jpg" file="ceramica_condor-resized1.jpg" />
+ </mediaBag>
+</JClicProject>
+
