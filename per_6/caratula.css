@@ -1,0 +1,96 @@
+
+
+body {
+    background-color: #bae2f1;;
+    margin: 0px;
+    padding: 0px;
+   
+}
+.container {
+    display: grid;
+    grid-template-columns: auto 80% auto;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas: "uno dos tres" "cuatro cinco seis";
+    
+}
+
+.item-2 {
+    grid-area: dos;
+    margin-top: 21px;
+    margin-bottom: 7px;
+}
+
+.item-2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px black;
+      }
+
+
+  .item-5 {
+    grid-area: cinco;
+           }
+
+
+.item-5 img {
+       width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px black;
+}
+
+.item-5 section {
+    display: grid;
+}
+
+.ingresar {
+    text-align: center;
+}
+
+  .item-8 {
+    grid-area: ocho;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+} 
+
+.container3{
+         
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container3 .btn-float3 .btn3{
+    text-decoration: none;
+    font-family: Segoe Print;
+    font-size: 1.2rem;
+    
+    letter-spacing: 2px;
+    background-color: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    position: fixed;
+    right: 125px;
+    bottom: 90px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 5px 10px 0px white;
+    z-index: 99;
+
+    
+}
+
+.container3 .btn-float3 .btn3:hover{
+    color: #19ce05;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-7px);
+}
+
+
+@media (max-width: 1400px){
+    .container3 .btn-float3 .btn3{
+        font-size: 1rem;      
+}
+}
